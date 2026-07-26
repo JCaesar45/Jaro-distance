@@ -1,0 +1,106 @@
+<html lang="en" data-theme="obsidian">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsidian // Zero-Knowledge Engine</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="aurora-bg" aria-hidden="true"></div>
+
+    <header class="glass-nav">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" class="logo-glyph">
+          <path
+            d="M12 2L2 7L12 12L22 7L12 2Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2 17L12 22L22 17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M2 12L12 17L22 12"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="brand-text">OBSIDIAN</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#protocol" class="nav-link">Protocol</a>
+        <a href="#ledger" class="nav-link">Ledger</a>
+        <a href="#vault" class="nav-link">Vault</a>
+      </nav>
+      <button class="cta-primary" id="initiate-sequence">
+        <span>Initialize</span>
+        <div class="cta-glow"></div>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero-plane" id="protocol">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="title-line">Cryptographic</span>
+            <span class="title-line accent">Supremacy.</span>
+          </h1>
+          <p class="hero-sub">
+            Enterprise-grade zero-knowledge architecture. Sub-millisecond state
+            reconciliation. Uncompromising fidelity.
+          </p>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-value" data-target="99.999">0</span>
+              <span class="metric-label">Uptime SLA %</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value" data-target="0.4">0</span>
+              <span class="metric-label">Latency (ms)</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-value" data-target="256">0</span>
+              <span class="metric-label">Bit Encryption</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <dialog id="vault-modal" class="glass-dialog">
+        <form method="dialog" class="dialog-form">
+          <h2 class="dialog-title">Access Vector</h2>
+          <div class="input-group">
+            <label for="cipher-key">Cipher Key</label>
+            <input
+              type="password"
+              id="cipher-key"
+              required
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <div class="input-glow"></div>
+          </div>
+          <div class="dialog-actions">
+            <button value="cancel" class="btn-ghost">Abort</button>
+            <button value="confirm" class="btn-solid" id="auth-submit">
+              Authenticate
+            </button>
+          </div>
+        </form>
+      </dialog>
+    </main>
+
+    <script type="module" src="engine.js"></script>
+  </body>
+</html>
